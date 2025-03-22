@@ -1,0 +1,49 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.movie-card {
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-item {
+  border-left: 3px solid #007bff;
+}
+
+.rating-badge {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.rating-high {
+  background-color: #28a745;
+  color: white;
+}
+
+.rating-medium {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.rating-low {
+  background-color: #dc3545;
+  color: white;
+} 

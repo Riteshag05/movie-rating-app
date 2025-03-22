@@ -397,7 +397,7 @@ const movies = [
 // Login function to get admin token
 async function login() {
   try {
-    const response = await axios.post('https://movie-rating-app-9pdl.onrender.com/api/users/login', adminCredentials);
+    const response = await axios.post('http://localhost:5001/api/users/login', adminCredentials);
     return response.data.token;
   } catch (error) {
     console.error('Login failed:', error.response?.data?.message || error.message);
@@ -412,7 +412,7 @@ async function addMovies(token) {
 
   for (const movie of movies) {
     try {
-      await axios.post('https://movie-rating-app-9pdl.onrender.com/api/movies', movie, {
+      await axios.post('http://localhost:5001/api/movies', movie, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
